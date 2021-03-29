@@ -31,10 +31,14 @@
 - File system of floppy disk.
 - It does not support layered structure, cluster addressed is only 12 bytes, which make the controlling of FAT a little difficult, and it only supports at most 32M partition.
 
+---
+
 ### FAT16:
 
 - File Allocation Table 16 bits
 - The configuration files of every sector are expressed by 16 bytes in FAT16 and this is why it is named FAT16
+
+---
 
 ### FAT32:
 
@@ -42,10 +46,14 @@
 - Maximum file size is only around 4 gigabytes.
 - Maximum size of a FAT32 partition is around 2 terabytes.
 
+---
+
 ### VFAT:
 
 - Virtual File Allocation Table
 - Extension of the FAT file system and was introduced with Windows 95
+
+---
 
 ### exFat:
 
@@ -53,15 +61,21 @@
 - Optimized for flash memory such as USB flash drives and SD cards.
 - exFAT can be used where NTFS is not a feasible solution.
 
+---
+
 ### NTFS:
 
 - New Technology File System.
 - File-level encryption called the Encrypting File System (EFS)
 
+---
+
 ### EXT3:
 
 - Third extended filesystem
 - Journaled file system that is commonly used by the Linux kernel. (Journaled file system: keeps track of changes not yet committed to the file system's main part by recording the intentions of such changes in a data structure known as a "journal")
+
+---
 
 ### EXT4:
 
@@ -72,9 +86,13 @@
 - Unlimited number of subdirectories
 - Journal checksums
 
+---
+
 ### Características del cifrado EFS:
 
 - Enables files to be transparently encrypted to protect confidential data from attackers with physical access to the computer.
+
+---
 
 # Parte 2
 
@@ -84,9 +102,13 @@ Servidor de correo y mensajería, orientado a empresas, comparte agenda y se sin
 Tiene seguimiento de trabajo llamado workflow. Ocupa mucho recurso de hardware.
 Otro problema es que la base de datos que se acumula es muy intensa, y si le pasa algo a la base de datos, repararla toma mucho tiempo.
 
+---
+
 ### SQL Server:
 
 Motor de base de datos que trabaja en base al lenguaje SQL. Motor de base de datos relacional. No era muy popular con las grandes empresas. Creado por syres, comprado por Microsoft.
+
+---
 
 ### System Center Configuration Manager:
 
@@ -94,30 +116,101 @@ Software para administrar red por medio de consola, todos los dispositivos que e
 También sirve para saber si falta algo en algún computador con respecto a hardware, de esta forma se puede saber si se perdió o ha sido robado, esto lo anuncia con alertas.
 Puede ver si alguien está instalando un software o desintalando.
 
+---
+
 ### Forefront Threat Management Gateway (TMG):
 
 Firewall Antivirus, ISA server es como era llamado anteriormente. Tiene protecciones de afuera hacia adentro y protección de a dentro. Analisa paquetes y revisa si algún equipo esta siendo atacado. Tambien puede bloquear palabras y alerta cuando las encuentra.
 Permite control total sobre la red.
 
+---
+
 ### Microsoft Host Integration Server:
+
+---
 
 ### Windows Server Update Services (WSUS):
 
+---
+
 ### Microsoft Software Update Services (SUS):
+
+---
 
 ### IIS:
 
+---
+
 ### Ras:
+
+---
 
 ### RRas:
 
+---
+
 ### Windows Deployment Services (WDS):
+
+---
 
 
 ---
 
 
 # Parte 3
+
+
+### Bosque
+
+Bosque y Arbol están relacionadas al dominio de Active Directory.
+Es una colección de uno o más dominios que comparten una misma estructura lógica, catálogo global, esquema y configuración.
+
+Todos los dominios del bosque cuentan con relaciones de confianza automáticas de 2 vías y transitivas.
+
+---
+
+### Árbol
+
+Un árbol de dominios (tree) es una colección de uno o más dominios que comparten un espacio de nombre contiguo. Por ejemplo si el primer dominio se llama contosa.com y tiene un subdominio, este sería subdominio.contosa.com.
+
+---
+
+### Catálogo Global
+
+El Global Catalog (GC) incluye una copia parcial de solo lectura que contiene información de los atributos más utilizados de los objetos del bosque.
+
+Entre otras cosas en lugar de tener que consultar DC por DC de cada dominio (de contar con más de uno) permite acelerar las búsquedas en el bosque consultando directamente al GC ya que tiene información de todos los objetos (funcionando como un índice).
+
+En adición, la membresía de grupos universales se almacena en el Catálogo Global.
+
+---
+
+### Sitio
+
+Los objetos de sitios están ubicados en el contenedor de sitios. Puede usar estos objetos de sitios para realizar las tareas siguientes:
+•	Crear nuevos sitios
+
+•	Delegar el control de los sitios mediante la directiva de grupo y los permisos
+
+En todos los sitios, existe un objeto de configuración de sitio NTDS. Este objeto identifica el generador de topología entre sitios (ISTG). El ISTG es el controlador de dominio del sitio que genera objetos de conexión de controladores de dominio en distintos sitios. Además, lleva a cabo las tareas de administración de replicación.
+
+---
+
+### Esquema
+
+Solo existe un maestro de esquema por bosque. Contiene la copia maestra del esquema utilizado por todos los demás controladores de dominio. Tener una copia maestra garantiza que todos los objetos se definan de la misma manera.
+
+---
+
+### Active Directory
+
+Active Directory Domain Services es un servicio de directorio que permite almacenar y administrar información de usuarios, computadoras, impresoras aplicaciones y otros objetos de la red de forma centralizada y segura.
+
+Desde Exchange 2000 Active Directory es el servicio de directorio utilizado por Exchange.
+
+En Active Directory se almacena información de configuración y destinatarios de correo. Cada vez que Exchange requiere información de configuración o sobre algún destinatario consulta Active Directory, si este no se encuentra disponible Exchange no va a funcionar correctamente.
+
+Debido a la fuerte integración de Exchange con Active Directory es importante entender los conceptos más básicos en relación a su interacción con el directorio, donde almacena información y que componentes requiere.
 
 ---
 
@@ -214,4 +307,8 @@ ser actualizados mediante el PDC.
 Los cambios se realizan en el PDC para luego ser replicados a los BDC.
 
 Si el PDC fallaba se podia promover alguna BDC a PDC.
+
+
+---
+
 
