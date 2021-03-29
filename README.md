@@ -78,6 +78,47 @@
 
 # Parte 2
 
+### Exchange Server:
+
+Servidor de correo y mensajería, orientado a empresas, comparte agenda y se sincroniza con correos electrónicos, se llamada Microsoft main server.
+Tiene seguimiento de trabajo llamado workflow. Ocupa mucho recurso de hardware.
+Otro problema es que la base de datos que se acumula es muy intensa, y si le pasa algo a la base de datos, repararla toma mucho tiempo.
+
+### SQL Server:
+
+Motor de base de datos que trabaja en base al lenguaje SQL. Motor de base de datos relacional. No era muy popular con las grandes empresas. Creado por syres, comprado por Microsoft.
+
+### System Center Configuration Manager:
+
+Software para administrar red por medio de consola, todos los dispositivos que están conectados en una red independiente del SO mediante protocolo SNMP. Hay un control total sobre los equipos en red. También tiene función de Team Viewer. Hace inventario de hardware y software. 
+También sirve para saber si falta algo en algún computador con respecto a hardware, de esta forma se puede saber si se perdió o ha sido robado, esto lo anuncia con alertas.
+Puede ver si alguien está instalando un software o desintalando.
+
+### Forefront Threat Management Gateway (TMG):
+
+Firewall Antivirus, ISA server es como era llamado anteriormente. Tiene protecciones de afuera hacia adentro y protección de a dentro. Analisa paquetes y revisa si algún equipo esta siendo atacado. Tambien puede bloquear palabras y alerta cuando las encuentra.
+Permite control total sobre la red.
+
+### Microsoft Host Integration Server:
+
+### Windows Server Update Services (WSUS):
+
+### Microsoft Software Update Services (SUS):
+
+### IIS:
+
+### Ras:
+
+### RRas:
+
+### Windows Deployment Services (WDS):
+
+
+---
+
+
+# Parte 3
+
 ---
 
 ### SAM:
