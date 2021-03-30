@@ -153,14 +153,10 @@ Permite control total sobre la red.
 
 ---
 
-
----
-
-
 # Parte 3
 
 
-### Bosque
+### Bosque:
 
 Bosque y Arbol están relacionadas al dominio de Active Directory.
 Es una colección de uno o más dominios que comparten una misma estructura lógica, catálogo global, esquema y configuración.
@@ -169,13 +165,13 @@ Todos los dominios del bosque cuentan con relaciones de confianza automáticas d
 
 ---
 
-### Árbol
+### Árbol:
 
 Un árbol de dominios (tree) es una colección de uno o más dominios que comparten un espacio de nombre contiguo. Por ejemplo si el primer dominio se llama contosa.com y tiene un subdominio, este sería subdominio.contosa.com.
 
 ---
 
-### Catálogo Global
+### Catálogo Global:
 
 El Global Catalog (GC) incluye una copia parcial de solo lectura que contiene información de los atributos más utilizados de los objetos del bosque.
 
@@ -185,7 +181,7 @@ En adición, la membresía de grupos universales se almacena en el Catálogo Glo
 
 ---
 
-### Sitio
+### Sitio:
 
 Los objetos de sitios están ubicados en el contenedor de sitios. Puede usar estos objetos de sitios para realizar las tareas siguientes:
 •	Crear nuevos sitios
@@ -196,13 +192,13 @@ En todos los sitios, existe un objeto de configuración de sitio NTDS. Este obje
 
 ---
 
-### Esquema
+### Esquema:
 
 Solo existe un maestro de esquema por bosque. Contiene la copia maestra del esquema utilizado por todos los demás controladores de dominio. Tener una copia maestra garantiza que todos los objetos se definan de la misma manera.
 
 ---
 
-### Active Directory
+### Active Directory:
 
 Active Directory Domain Services es un servicio de directorio que permite almacenar y administrar información de usuarios, computadoras, impresoras aplicaciones y otros objetos de la red de forma centralizada y segura.
 
